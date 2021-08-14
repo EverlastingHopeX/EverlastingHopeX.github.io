@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Java to Kotlin"
 date:   2021-08-14 15:04:41 +0800
 categories: Java Kotlin
