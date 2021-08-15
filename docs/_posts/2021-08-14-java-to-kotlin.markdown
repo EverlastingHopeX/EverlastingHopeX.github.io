@@ -37,18 +37,18 @@ Kotlin相对Java除了语法的细微改变，有值得注意的几点。
 
 13. 构造器（constructor）。Kotlin中的类可以有一个主构造函数（primary constructor）和多个次构造函数（secondary constructor）。主构造器属于类的声明的头部（header）的一部分，例如
     
-    {% highlight kotlin %}
+    ```Kotlin
      class Person contructor (firstName: String){}
-    {% endhight %}
+     ```
      
     当声明类时列出类中包含的属性，将会自动提供对应的默认构造器作为主构造器。如果不需要注解或者可见性修饰符，则可以省略`constructor`。主构造器不包含任何代码，但可以使用`init`创建初始化代码在对象实例化时执行必要的初始化。初始化代码可以看作**主构造器的一部分**，可以存在**多块**，将按照顺序执行。次级构造器的声明在类的内部，必须直接或间接的**调用主构造器**。
 14. `new`。Kotlin中没有`new`，创建对象可以直接调用构造函数创建。
 15. `Any`。Kotlin中的`Any`类似于Java中的`Object`，实际上，在JVM上运行时，`Any`和`Object`被视作相同。不过，如之前提到的，Java中有基本数据类型，而Kotlin没有，所以Kotlin中的`Any`更符合“万物始源”。（参考：[Does Any == Object](https://stackoverflow.com/questions/38761021/does-any-object)）
 16. 数据类（Data class）。只包含数据的类，使用`data`修饰，例如
     
-    {% highlight kotlin %}
+    ```Kotlin
     data class User(val name: String, val age: Int)
-    {% endhight %}
+    ```
 
     Kotlin会自动生成对应函数，包括`equals()` / `hashCode()`， `toString()`，`componentN()`（如`compnent1()`返回第一个属性，用于解构对象），`copy()`（深复制）。
 17. 密封类（sealed class）。封装类和封装接口使用`sealed`修饰，用于限制类的继承结构来更好的控制继承。所有封装类的子类在编译时已知，封装类的子类只能存在于该封装类所在的编译单元和包下。当需要有限个不同的选项时，可以使用密封类。此情况下，密封类像是**枚举类的扩展**，不同的是枚举类只有一个值，而密封类可以有不同数目的值和方法。（参考：[Sealed class in Kotlin](https://www.baeldung.com/kotlin/sealed-classes))
