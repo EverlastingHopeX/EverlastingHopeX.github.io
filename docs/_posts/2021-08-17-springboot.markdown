@@ -1,5 +1,6 @@
 ---
 layout: single
+toc: true
 title:  "Spring Boot"
 date:   2021-08-19 17:16:00 +0800
 categories: Spring SpringBoot
@@ -101,5 +102,5 @@ Table 3. Spring Boot technical starters
 |spring-boot-starter-logging|Starter for logging using Logback. Default logging starter|
 |spring-boot-starter-reactor-netty|Starter for using Reactor Netty as the embedded reactive HTTP server.|
 |spring-boot-starter-tomcat|Starter for using Tomcat as the embedded servlet container. Default servlet container starter used by spring-boot-starter-web|
-|spring-boot-starter-undertow|Starter for using Undertow as the embedded servlet container. An alternative to spring-boot-starter-tomcat
+|spring-boot-starter-undertow|Starter for using Undertow as the embedded servlet container. An alternative to spring-boot-starter-tomcat|
 
