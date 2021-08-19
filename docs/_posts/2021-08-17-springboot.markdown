@@ -37,6 +37,7 @@ categories: Spring SpringBoot
 使用者可以依据项目的需要，在POM文件中添加对应的starter的依赖，而不需要繁琐的手动的管理配置依赖。如下是官方文档中的starter列表。至于具体的使用，如Redis, AOP等，我在使用到时再另写一篇。
 
 Table 1. Spring Boot application starters
+
 |Name|	Description|
 |---|---|
 |spring-boot-starter|Core starter, including auto-configuration support, logging and YAML|
@@ -92,6 +93,7 @@ Table 2. Spring Boot production starters
 |spring-boot-starter-actuator|Starter for using Spring Boot’s Actuator which provides production ready features to help you monitor and manage your application|
 
 Table 3. Spring Boot technical starters
+
 |Name|	Description|
 |---|---|
 |spring-boot-starter-jetty|Starter for using Jetty as the embedded servlet container. An alternative to spring-boot-starter-tomcat|
