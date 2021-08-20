@@ -35,7 +35,7 @@ Spring通过使用IoC容器对对象注入依赖来实现IoC。这样对象就�
 ## IoC容器
 ![IoC container from Spring framework(Core) for complete beginners](../assets/IoC_Container.png)
 
-**Mechanism of IoC container from [Spring framework tutorial for beginners with examples in eclipse | Why spring inversion of control ? [Youtube]](https://www.youtube.com/watch?v=r2Q0Jzl2qMQ&list=PL3NrzZBjk6m-nYX072dSaGfyCJ59Q5TEi&index=1)**
+**Mechanism of IoC container from [Why spring inversion of control ? [Youtube]](https://www.youtube.com/watch?v=r2Q0Jzl2qMQ&list=PL3NrzZBjk6m-nYX072dSaGfyCJ59Q5TEi&index=1)**
 
 上图展示了IoC容器如何创建和管理Beans来实现控制反转。IoC容器会读取配置文件并创建对应的Bean，当某处代码需要使用Bean时，只需调用 `getBean("BeanX")` 就可以获取对应的Bean。
 
