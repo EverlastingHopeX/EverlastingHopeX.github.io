@@ -33,7 +33,7 @@ IoC可以通过不同的机制实现，包括策略设计模式（Strategy Desig
 Spring通过使用IoC容器对对象注入依赖来实现IoC。这样对象就会使用被注入的实现方式，而不必在本地进行创建和实现。
 
 ## IoC容器
-![IoC container from Spring framework(Core) for complete beginners](../assets/IoC_Container.png)
+![IoC container from Spring framework(Core) for complete beginners](/docs/assets/IoC_Container.png)
 
 **Mechanism of IoC container from [Why spring inversion of control ? [Youtube]](https://www.youtube.com/watch?v=r2Q0Jzl2qMQ&list=PL3NrzZBjk6m-nYX072dSaGfyCJ59Q5TEi&index=1)**
 
