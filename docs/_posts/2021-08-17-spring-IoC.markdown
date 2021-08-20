@@ -3,7 +3,7 @@ layout: single
 toc: true
 toc_label: "Table of contents"
 title:  "Spring IoC"
-date:   2021-08-17 18:09:00 +0800
+date:   2021-08-20 18:52:00 +0800
 categories: Spring IOC dependency-injection
 ---
 
