@@ -1,0 +1,52 @@
+---
+layout: single
+toc: true
+toc_label: "Table of contents"
+title:  "Redis"
+date:   2021-08-23 17:16:00 +0800
+categories: DistributedSystem
+---
+
+在准备求职的时候，有关Redis的知识点经常被提及，不过我并没有接触过Redis。正好有时间，这次就学习一下。
+
+Redis的名字来源是**Re**mote **Di**ctionary **S**erver。Redis使用的数据结构是键值对（key-value pair)，数据存储在RAM上（In-memory database）。由于存储在RAM上，所以Redis的读写操作都非常的快，但是也会带来不稳定性（volatile）的问题。如果服务器崩溃，则存储在RAM上的数据会全部消失。所以Redis也会把数据存在硬盘中，便于重新构建数据库。
+
+Redis提供了很多用于拓展的模块，如RedisJSON，RediSearch等。
+
+# Redis的优点
+
+Redis有如下优点：
+1. 速度快。Redis的速度非常快，每秒可以有 11，000 SET操作，81，000 GET操作。
+2. 丰富的数据类型支持。Redis本地支持大多数开发者已知的数据类型，包括list，set，sorted set，和hashes。
+3. 原子操作。Redis所有的操作都是原子操作。
+4. 多用途工具。Redis可以用在多个场景，例如缓存，消息队列，以及应用内的短期数据。
+
+# 对比其他键值对型存储
+
+1. Redis的键值对的值可以包含更复杂的数据类型，并且每个数据类型都支持原子操作。
+2. Redis使用内存存储且用硬盘存储保持持续性（persistent）。它做出了一种独特的取舍。实现了高速读写操作但也限制了数据集的大小（不能超过内存大小）
+3. 与硬盘存储数据库相比，内存存储数据库对数据的操作更简单。
+
+
+# 安装和使用
+
+Windows上无法直接安装Redis，我采取的方法是用windows的Linux子系统。在Linux命令行使用 `sudo apt-get install redis` 就好了。安装完成后，使用  `redis-server` 启动Redis服务器，会出现防火墙提示，允许就好。
+
+在运行Redis服务器后，想要访问需要另开一个命令行。在Linux使用 `redis-cli` 命令便能进入Redis的命令行界面对Redis输入命令，使用 `exit` 可以退出。
+
+# 参考资源
+
+[Redis in 100 Seconds [Youtube]](https://www.youtube.com/watch?v=G1rOthIU-uo)
+>用一百秒概述Redis，包括起源，机制，应用。
+
+[Redis [Wikipedia]](https://en.wikipedia.org/wiki/Redis)
+>Redis的维基百科。
+
+[Redis Crash Course [Youtube]](https://www.youtube.com/watch?v=jgpVdJB2sKQ)
+>Redis的30分钟教程，简单介绍了Redis，Redis的安装使用，并讲解了一个Node.js示例项目。
+
+[Redis Tutorial [Tutorialspoint]](https://www.tutorialspoint.com/redis/index.htm)
+>Redis的一个比较完备的文档教程。
+
+[Redis Documentation [Redis]](https://redis.io/documentation)
+>Redis的官方文档
