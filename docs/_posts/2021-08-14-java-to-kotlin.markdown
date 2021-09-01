@@ -58,3 +58,11 @@ Kotlin相对Java除了语法的细微改变，有值得注意的几点。
 [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)
 
 >适合有Java基础的人。从基础，函数和类三个方面用示例代码进行简单直观的比较。需要注意的是，有些Java和Kotlin示例并不能完全一一对应。
+
+[Clean Code with Kotlin [Philipp Hauer]](https://phauer.com/2017/clean-code-kotlin/)
+
+>讲了Kotlin的邮件，使用了Java作为对比。
+
+[Idiomatic Kotlin. Best Practices. [Philipp Hauer]](https://phauer.com/2017/idiomatic-kotlin-best-practices/)
+
+>
