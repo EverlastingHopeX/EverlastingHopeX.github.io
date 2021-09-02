@@ -1,0 +1,31 @@
+`git fetch`
+downloads commits, files, and refs from a remote repository into your local repo. but it doesn’t force you to actually merge the changes into your repository. 
+[Git fetch [Atlassian](https://www.atlassian.com/git/tutorials/syncing/git-fetch)
+
+`git pull`
+pulls the changes from the remote repository to the local computer.
+
+`git rebase`
+Rebasing is the process of moving or combining a sequence of commits to a new base commit. It can be used to maintain a linear project history.
+[Git rebase [Atlassian](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+
+`git cherry pick`
+enables arbitrary Git commits to be picked by reference and appended to the current working HEAD.
+[Git cherry pick [Atlassian]](https://www.atlassian.com/git/tutorials/cherry-pick)
+
+`git reset`
+a complex and versatile tool for undoing changes. For example, `git reset x` moves both the HEAD and branch refs to the specified commit (x).
+`--soft`: the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left untouched.
+`--hard`: the most direct, DANGEROUS, and frequently used option, any pending work that was hanging out in the Staging Index and Working Directory will be lost.
+`--mixed`: the default operating mode. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory.
+[Git reset [Atlassian]](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)
+
+`git checkout`
+lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch.
+It is similar but different from `git clone` as clone works to fetch code from a remote repository, alternatively checkout works to switch between versions of code already on the local system.
+[Git checkout [Atlassian]](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
+
+# 参考资源
+[Git Command](http://guides.beanstalkapp.com/version-control/common-git-commands.html)
+
+[Learn Git with BitBucket Cloud [Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
