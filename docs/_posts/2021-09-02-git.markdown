@@ -1,3 +1,12 @@
+---
+layout: single
+toc: true
+toc_label: "Table of contents"
+title:  "Git commands"
+date:   2021-09-02 16:52:00 +0800
+categories: Git
+---
+
 `git fetch`
 downloads commits, files, and refs from a remote repository into your local repo. but it doesn’t force you to actually merge the changes into your repository. 
 [Git fetch [Atlassian](https://www.atlassian.com/git/tutorials/syncing/git-fetch)
