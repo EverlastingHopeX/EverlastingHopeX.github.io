@@ -1,3 +1,12 @@
+---
+layout: single
+toc: true
+toc_label: "Table of contents"
+title:  "JUnit5 and MockK"
+date:   2021-09-02 19:18:00 +0800
+categories: JUnit5 Kotlin MockK
+---
+
 熟悉项目先从测试开始。开始学习整理一下JUnit5和其他测试框架的心得和资料。之前使用过JUnit5和Mockito对Java项目进行测试，在现在这个项目中因为采用的是Kotlin，
 所以框架用的是MockK。MockK和Mockito有诸多相似之处，而网上Mockito相关的信息更加丰富，因此在查找资料时，查看Mockito的相似语法也提供了很大帮助。
 
