@@ -67,18 +67,28 @@ categories: JUnit5 Kotlin MockK
 
 （参考：[Late-initialized properties and variables [Kotlin]](https://kotlinlang.org/docs/properties.html#late-initialized-properties-and-variables)）
 
-# 语法关键词
+# 函数
 
 1. `verify`
 
 与Mockito相似，用于验证方法的调用。详细见本文 - MockK - 验证
 
+2. `every`
+
+用于打桩（stubbing）代码块，指定调用某方法的返回值。
+
+3. `clearMocks()`
+
+清除特定的Mock。需要注意clear和unmock的区别，clear会清除对象内部的状态，使对象变为一个空的对象（Empty object），而unmock则会将对象变为mock之前的状态。
+
+其他函数及其功能可见：
+[常用函数表（Top level functions）[MockK docs]](https://mockk.io/#top-level-functions)
+
 # MockK
 
 MockK是面向Kotlin的模拟库（Mocking library。
 
-（参考：[MockK: A Mocking Library for Kotlin [Baeldung]](https://www.baeldung.com/kotlin/mockk),
-[MockK Home[MockK]](https://mockk.io/)）
+（参考：[MockK: A Mocking Library for Kotlin [Baeldung]](https://www.baeldung.com/kotlin/mockk)）
 
 
 ## Relaxed Mock
@@ -99,3 +109,7 @@ Mock对象的任何方法是否被调用，使用 `verifySequence()`和`verifyOr
 > JUnit5的官方文档https://www.baeldung.com/junit-5-extensions
 
 [MockK：一款強大的 Kotlin Mocking Library [Joe Blog]](https://medium.com/joe-tsai/mockk-%E4%B8%80%E6%AC%BE%E5%BC%B7%E5%A4%A7%E7%9A%84-kotlin-mocking-library-part-1-4-39a85e42b8)
+>
+
+[MockK Home[MockK]](https://mockk.io/)
+>
