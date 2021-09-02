@@ -1,0 +1,92 @@
+熟悉项目先从测试开始。开始学习整理一下JUnit5和其他测试框架的心得和资料。之前使用过JUnit5和Mockito对Java项目进行测试，在现在这个项目中因为采用的是Kotlin，
+所以框架用的是MockK。不过MockK和Mockito有诸多相似之处。
+
+# 注解（Annotations）
+
+先从遇到的开始。
+
+1. `@ExtendWith(MockKExtension::class)`
+
+`@ExtendWith` 用于声明式的注册扩展，详细见本文 扩展 - 扩展的注册 - 声明式。MockK是面向Kotlin的模拟库（Mocking library），MockKExtension用于初始化模拟。
+
+2. `@RelaxedMockK`
+
+在此处标注了成员变量，用于指定该变量为relaxed mock对象。
+
+3. `@InjectMockKs`
+
+在此处修饰一个`lateinit`的成员变量，用于指明此变量对应的对象应该被注入。`@InjectMockKs` 默认只注入`lateinit`变量或者还未赋值的变量，但可以通过设定改变。
+
+4. `@Test`
+
+修饰方法，指明该方法是一个测试方法。
+
+
+## 元注解与组合注解（Meta Annotations and Composed Annotations）
+
+元注解是可以应用于其他注解的注解，组合注解则是由一或多个元注解标注的自定义注解。Junit Jupiter注解可以用作元注解
+（参考： [What Are Meta-Annotations in Java? [DZone]](https://dzone.com/articles/what-are-meta-annotations-in-java)，
+[Spring 组合注解(Composed Annotation) [GitHub]](https://nanlei.github.io/my-notes/SpringFramework/spring-annotation-composed-annotation/)
+
+## 扩展（Extension）
+
+扩展的目的是用于扩展测试类或者测试方法的行为。扩展与测试运行的特定活动相关联，该活动被称为扩展点（Extension point）。当抵达特定的生命周期阶段时，JUnit引擎会调用被注册的扩展。
+
+有五种主要的扩展点。
+
+（参考：[A Guide to JUnit 5 Extensions [Baeldung]](https://www.baeldung.com/junit-5-extensions)
+
+### 扩展的注册（Register）
+
+扩展的注册分为三类：1. 声明式（Declarative），2. 编程式（Programmatical），3. 自动式（Automatic）。声明式使用 `@ExtendWith`，编程式使用 `@RegisterExtension`，
+自动式使用Java的ServiceLoader机制。
+
+#### 声明式
+
+通过给一个测试接口（或测试类，测试方法）添加注解，或者采用 `@ExtendWith` 自定义组合注解并提类的引用，可以声明式地注册扩展。
+
+#### 编程式
+
+#### 自动式
+
+# 变量类型
+
+1. `lateinit`
+
+在此处修饰成员变量。在单元测试中，非空类型的成员变量无法在构造函数中初始化，但仍需要在类内部引用时避免null检查。这时就可以使用 `lateinit` 修饰符，当在此变量未初始化时访问会
+抛出一个特殊的异常，指明被访问的变量并指出它还未被初始化。
+
+（参考：[Late-initialized properties and variables [Kotlin]](https://kotlinlang.org/docs/properties.html#late-initialized-properties-and-variables)）
+
+# 语法关键词
+
+1. `verify`
+
+与Mockito相似，用于验证方法的调用。详细见本文 - MockK - 验证
+
+# MockK
+
+MockK是面向Kotlin的模拟库（Mocking library。
+
+（参考：[MockK: A Mocking Library for Kotlin [Baeldung]](https://www.baeldung.com/kotlin/mockk),
+[MockK Home[MockK]](https://mockk.io/)）
+
+
+## Relaxed Mock
+
+一个relaxed mock（感觉翻译为放松的模拟有些奇怪，故之后均不翻译）是为所有方法返回一些简单的值的模拟，这可以省略为每个方法指定行为。使用 `RelaxedMockK` 注解的对象
+的方法被调用时会返回对应类型的默认值。
+
+## 验证（Verify）
+
+MockK使用 `verify()` 验证方法的调用，在 `()`中写入需要验证的条件，在 `{}` 中写入需要验证的方法。
+
+验证条件可以使用的关键词包括 `atLeast`，`atMost`，和`exactly`，可以用来验证调用的次数。还可以使用 `verifyAll()`来验证是否所有的调用都发生了，使用 `wasNot Called`判断
+Mock对象的任何方法是否被调用，使用 `verifySequence()`和`verifyOrder()`验证调用的顺序（后者指明的顺序中可以存在遗漏，例如方法1，2，3发生了，两者都指明顺序为1，3，前者无法
+通过而后者可以通过）。
+
+# 参考资料
+[JUnit5 User Guide [JUnit docs]](https://junit.org/junit5/docs/current/user-guide/)
+> JUnit5的官方文档https://www.baeldung.com/junit-5-extensions
+
+[MockK：一款強大的 Kotlin Mocking Library [Joe Blog]](https://medium.com/joe-tsai/mockk-%E4%B8%80%E6%AC%BE%E5%BC%B7%E5%A4%A7%E7%9A%84-kotlin-mocking-library-part-1-4-39a85e42b8)
