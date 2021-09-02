@@ -1,5 +1,5 @@
 熟悉项目先从测试开始。开始学习整理一下JUnit5和其他测试框架的心得和资料。之前使用过JUnit5和Mockito对Java项目进行测试，在现在这个项目中因为采用的是Kotlin，
-所以框架用的是MockK。不过MockK和Mockito有诸多相似之处。
+所以框架用的是MockK。MockK和Mockito有诸多相似之处，而网上Mockito相关的信息更加丰富，因此在查找资料时，查看Mockito的相似语法也提供了很大帮助。
 
 # 注解（Annotations）
 
@@ -15,7 +15,7 @@
 
 3. `@InjectMockKs`
 
-在此处修饰一个`lateinit`的成员变量，用于指明此变量对应的对象应该被注入。`@InjectMockKs` 默认只注入`lateinit`变量或者还未赋值的变量，但可以通过设定改变。
+在此处修饰一个`lateinit`的成员变量，用于指明此变量对应的Mock对象在创建时应该被注入其他对象（当前测试类中使用 `@RelaxedMockK` 修饰的对象）。`@InjectMockKs` 默认只注入`lateinit`变量或者还未赋值的变量，但可以通过设定改变。
 
 4. `@Test`
 
