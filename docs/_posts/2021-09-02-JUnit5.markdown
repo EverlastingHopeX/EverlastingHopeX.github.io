@@ -67,7 +67,14 @@ categories: JUnit5 Kotlin MockK
 
 （参考：[Late-initialized properties and variables [Kotlin]](https://kotlinlang.org/docs/properties.html#late-initialized-properties-and-variables)）
 
-# 函数
+
+# MockK
+
+MockK是面向Kotlin的模拟库（Mocking library。
+
+（参考：[MockK: A Mocking Library for Kotlin [Baeldung]](https://www.baeldung.com/kotlin/mockk)）
+
+## 函数
 
 1. `verify`
 
@@ -81,14 +88,12 @@ categories: JUnit5 Kotlin MockK
 
 清除特定的Mock。需要注意clear和unmock的区别，clear会清除对象内部的状态，使对象变为一个空的对象（Empty object），而unmock则会将对象变为mock之前的状态。
 
+4. `answers()`
+
+
+
 其他函数及其功能可见：
 [常用函数表（Top level functions）[MockK docs]](https://mockk.io/#top-level-functions)
-
-# MockK
-
-MockK是面向Kotlin的模拟库（Mocking library。
-
-（参考：[MockK: A Mocking Library for Kotlin [Baeldung]](https://www.baeldung.com/kotlin/mockk)）
 
 
 ## Relaxed Mock
@@ -104,6 +109,29 @@ MockK使用 `verify()` 验证方法的调用，在 `()`中写入需要验证的�
 Mock对象的任何方法是否被调用，使用 `verifySequence()`和`verifyOrder()`验证调用的顺序（后者指明的顺序中可以存在遗漏，例如方法1，2，3发生了，两者都指明顺序为1，3，前者无法
 通过而后者可以通过）。
 
+##  匹配器（Matcher）
+
+匹配器相当于通配符或者正则表达式，用来匹配特定的值，用于打桩（stubs）或者验证。
+
+
+匹配器及其功能可见：
+[匹配器（Matchers）[MockK docs]](https://mockk.io/#matchers)
+
+Mockito中的匹配器：
+[Different Types Of Matchers Provided By Mockito [Software Testing Help]](https://www.softwaretestinghelp.com/mockito-matchers/)
+
+## 应答（Answer）
+
+Mockito对应答的定义为
+
+>Answer specifies an action that is executed and a return value that is returned when you interact with the mock.
+
+应答指定了当与mock互动时执行的行为和返回值。常用的包括 `returns value`，`answers { code }`等。 
+
+应答及其功能可见：
+[应答（Answers）[MockK docs]](https://mockk.io/#answers)
+
+
 # 参考资料
 [JUnit5 User Guide [JUnit docs]](https://junit.org/junit5/docs/current/user-guide/)
 > JUnit5的官方文档https://www.baeldung.com/junit-5-extensions
@@ -112,4 +140,7 @@ Mock对象的任何方法是否被调用，使用 `verifySequence()`和`verifyOr
 >
 
 [MockK Home[MockK]](https://mockk.io/)
+>
+
+[MockK Guidebook [Tiger Oakes]](https://notwoods.github.io/mockk-guidebook/)
 >
