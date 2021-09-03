@@ -31,6 +31,13 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 @SchedulerLock(name = "lockName", lockAtMostFor = "50s", lockAtLeastFor = "30s")
 ```
 
+# `@ConfigurationProperties`
+
+用于使用配置文件配置Bean。
+
+# `@ConstructorBinding`
+
+绑定构造器和配置文件，使得修饰的类成为不可更改的（immutable）。
 
 
 # 参考资料
