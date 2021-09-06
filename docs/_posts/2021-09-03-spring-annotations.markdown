@@ -39,9 +39,14 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 
 绑定构造器和配置文件，使得修饰的类成为不可更改的（immutable）。
 
+# `@Qualifier`
+
+在使用 `@Autowire` 时，有时因为有多个同类型的bean存在，Spring无法判断应该注入哪个bean，这时候就可以使用 `@Qualifier` 来指定使用哪一个bean。
 
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
 
 [Lock @Scheduled Tasks With ShedLock And Spring Boot](https://rieckpil.de/lock-scheduled-tasks-with-shedlock-and-spring-boot/)
+
+[The Spring @Qualifier Annotation [Baeldung]](https://www.baeldung.com/spring-qualifier-annotation)
