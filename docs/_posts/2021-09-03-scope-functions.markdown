@@ -7,7 +7,7 @@
 它们的功能都相差不多，区别在于调用该函数的对象在代码块中的引用方式（ `this` 或 `it` ）和返回值（上下文对象或lambda表达式的结果）。作用域函数没有引入新技术，仅仅让代码更简洁。
 
 它们的区别可参考下表：
-[函数选择 []Kotlin docs]](https://www.kotlincn.net/docs/reference/scope-functions.html#%E5%87%BD%E6%95%B0%E9%80%89%E6%8B%A9)
+[函数选择 [Kotlin docs]](https://www.kotlincn.net/docs/reference/scope-functions.html#%E5%87%BD%E6%95%B0%E9%80%89%E6%8B%A9)
 
 # 参考资源
 
