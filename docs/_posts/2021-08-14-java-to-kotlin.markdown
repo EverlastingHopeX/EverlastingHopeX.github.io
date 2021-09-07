@@ -46,6 +46,7 @@ Kotlin相对Java除了语法的细微改变，有值得注意的几点。
 19. 委托（Delegation）。委托模式是继承的替代品，Java中可以通过聚合，即在类中存有另一个类的示例来实现委托，Kotlin仅仅提供了更简洁的语法。相较于继承，委托可以直接使用已有的接口的实现来实现多个接口，或者来加强一个已有的实现。（参考：[Delegation pattern](https://www.baeldung.com/kotlin/delegation-pattern)，[When to use delegation instead of inheritance? [StackOverflow](https://stackoverflow.com/questions/832536/when-to-use-delegation-instead-of-inheritance) ）
 20. `lateinit`。`lateinit` 用于声明变量之后将会在使用之前初始化，所以不在声明时初始化。`
 21. `*`。星号在Kotlin中为展开操作符（Spread operator），例如会把一个Int类型的列表转化为一组Int类型的对象作为参数。另一个与 `*` 的概念是可变数量参数 `vararg` （参考：[Varargs and Spread Operator in Kotlin[Baeeldung]](https://www.baeldung.com/kotlin/varargs-spread-operator)
+22. `Unit`。对应Java中的 `void`。
 
 # 参考资源
 
