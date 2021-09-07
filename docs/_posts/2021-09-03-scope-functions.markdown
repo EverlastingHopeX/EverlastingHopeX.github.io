@@ -9,6 +9,8 @@
 它们的区别可参考下表：
 [函数选择 [Kotlin docs]](https://www.kotlincn.net/docs/reference/scope-functions.html#%E5%87%BD%E6%95%B0%E9%80%89%E6%8B%A9)
 
+遇到过一次小坑，使用MockK的 `every{}` 时，在其内部也有 `this`。如果在外部使用 `apply{}` 就会导致`this` 被覆盖。
+
 # 参考资源
 
 [簡介 Kotlin: run, let, with, also 和 apply [Ray Yuan Liou]](https://louis383.medium.com/%E7%B0%A1%E4%BB%8B-kotlin-run-let-with-also-%E5%92%8C-apply-f83860207a0c)
