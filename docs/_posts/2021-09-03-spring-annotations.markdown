@@ -17,6 +17,23 @@
 @Scheduled(fixDelay = 1000, initialDelay = 1000)
 @Scheduled(cron = "* * * * * *")
 ```
+
+## 测试方法
+
+·@Scheduled` 的测试方法包括：
+1. 集成测试.
+2. Awaitility。
+
+首先需要新建 SchduledConfig 类并添加 `@EnableSchduling` 注解。然后就可以采用集成测试的方法或者使用Awaitility的方法，两者区别仅在于注入方法采用 `@Autowire` 还是 `@SpyBean`，以及Awaitiliy提供的方法可读性更好。
+（参考 [How to Test the @Scheduled Annotation [Baeldung]](https://www.baeldung.com/spring-testing-scheduled-annotation)
+
+### Awaitility
+
+>Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner.
+以上是 Awaitiliy 的官方解释。简而言之 Awaitility 提供了方便的测试异步系统的方法。
+
+（参考 [Awaitility.org](http://www.awaitility.org/)）
+
 # `@SchedulerLock`
 
 为了避免使用 `@Scheduled` 的方法在并行环境下执行导致数据不一致，Spring提供了ShedLock来确保同一时间只执行一个任务。通过给任务加锁，其他实例在检测到任务已
