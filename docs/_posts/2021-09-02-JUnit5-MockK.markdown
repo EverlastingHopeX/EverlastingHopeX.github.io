@@ -132,6 +132,13 @@ Mockito对应答的定义为
 应答及其功能可见：
 [应答（Answers）[MockK docs]](https://mockk.io/#answers)
 
+## 集合
+
+在做测试的过程中，有的类的属性包括了集合的实例。在这种情况下，似乎应该Mock一个集合，事实上这不是什么好主意，因为集合的方法很多，而且互相依赖，很难保证对每个方法都Mock了相应的
+方法，更推荐的方法是创建一个真实的集合，而在其中放入Mock的集合的元素。
+
+参考 [Mockito: mocking an arraylist that will be looped in a for loop [StackOverflow]](https://stackoverflow.com/questions/18483176/mockito-mocking-an-arraylist-that-will-be-looped-in-a-for-loop)
+
 
 # 参考资料
 [JUnit5 User Guide [JUnit docs]](https://junit.org/junit5/docs/current/user-guide/)
