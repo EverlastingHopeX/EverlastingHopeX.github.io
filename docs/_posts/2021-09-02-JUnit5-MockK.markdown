@@ -26,6 +26,8 @@ categories: JUnit5 Kotlin MockK
 
 在此处修饰一个`lateinit`的成员变量，用于指明此变量对应的Mock对象在创建时应该被注入其他对象（当前测试类中使用 `@RelaxedMockK` 修饰的对象）。`@InjectMockKs` 默认只注入`lateinit`变量或者还未赋值的变量，但可以通过设定改变。
 
+需要注意的是，如果部分属性无法使用Mock，则不要使用 `@InjectMockKs`，而是在 `init` 部分手动使用构造函数初始化该变量。
+
 4. `@Test`
 
 修饰方法，指明该方法是一个测试方法。
@@ -100,6 +102,10 @@ MockK是面向Kotlin的模拟库（Mocking library。
 
 一个relaxed mock（感觉翻译为放松的模拟有些奇怪，故之后均不翻译）是为所有方法返回一些简单的值的模拟，这可以省略为每个方法指定行为。使用 `RelaxedMockK` 注解的对象
 的方法被调用时会返回对应类型的默认值。
+
+## Spy
+
+
 
 ## 验证（Verify）
 
