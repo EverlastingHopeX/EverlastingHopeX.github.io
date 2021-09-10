@@ -60,6 +60,18 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 
 在使用 `@Autowire` 时，有时因为有多个同类型的bean存在，Spring无法判断应该注入哪个bean，这时候就可以使用 `@Qualifier` 来指定使用哪一个bean。
 
+# `@Entity`
+
+# `@EntityListeners`
+
+指定对实体的回调监听器（callback listener），常用 `AuditingEntityListener`。设定好监听器后可以在该类中声明监听的属性（如修改日期，修改者），并标明对应的注解，
+
+（参考：[JPA Entity Lifecycle Events [Baeldung](https://www.baeldung.com/jpa-entity-lifecycle-events)，[Auditing [Spring docs]](https://docs.spring.io/spring-data/jpa/docs/1.7.0.DATAJPA-580-SNAPSHOT/reference/html/auditing.html)，[Auditing with JPA, Hibernate, and Spring Data JPA [Baeldung](https://www.baeldung.com/database-auditing-jpa)）
+
+# `@Id`
+
+把数据模型类中的一个属性标记为主键。
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
