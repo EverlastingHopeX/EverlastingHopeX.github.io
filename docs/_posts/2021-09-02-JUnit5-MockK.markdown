@@ -88,7 +88,7 @@ MockK是面向Kotlin的模拟库（Mocking library。
 
 3. `clearMocks()`
 
-清除特定的Mock。需要注意clear和unmock的区别，clear会清除对象内部的状态，使对象变为一个空的对象（Empty object），而unmock则会将对象变为mock之前的状态。
+清除特定的Mock。需要注意clear和unmock的区别，clear会清除对象内部的状态，使对象变为一个空的对象（Empty object），而unmock则会将对象变为mock之前的状态。具体说，clear会清除通过 `every` 设定的行为和调用计数。
 
 4. `answers()`
 
