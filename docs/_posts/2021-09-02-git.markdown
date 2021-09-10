@@ -34,6 +34,9 @@ lets you navigate between the branches created by git branch. Checking out a bra
 It is similar but different from `git clone` as clone works to fetch code from a remote repository, alternatively checkout works to switch between versions of code already on the local system.
 [Git checkout [Atlassian]](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
 
+`git add`
+
+
 # 参考资源
 [Git Command](http://guides.beanstalkapp.com/version-control/common-git-commands.html)
 
