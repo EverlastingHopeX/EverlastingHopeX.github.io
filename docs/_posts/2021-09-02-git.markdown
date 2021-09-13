@@ -28,23 +28,22 @@ categories: Git
 ## `git cherry pick`
 
 可以任意挑选一个commit并添加到当前的working HEAD。
-enables arbitrary Git commits to be picked by reference and appended to the current working HEAD.
 
 [Git cherry pick [Atlassian]](https://www.atlassian.com/git/tutorials/cherry-pick)
 
 ## `git reset`
 
-a complex and versatile tool for undoing changes. For example, `git reset x` moves both the HEAD and branch refs to the specified commit (x).
-`--soft`: the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left untouched.
-`--hard`: the most direct, DANGEROUS, and frequently used option, any pending work that was hanging out in the Staging Index and Working Directory will be lost.
-`--mixed`: the default operating mode. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory.
+用来撤销作出的改变。`git reset {commit name}` 会将HEAD和分支refs移动到特定的commit。reset有三种方式：
+1. `--soft`：更新ref的指针，暂存区和工作目录未变动。
+2. `--hard`：最直接，最危险，也最经常被使用的方式。暂存区和工作目录下所有待处理的工作都会消失。
+3. `--mixed`：默认的操作模式。更新ref的指针，暂存区被重置到特定的commit的状态，暂存区内被撤销的工作被移动到工作目录。
 
 [Git reset [Atlassian]](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)
 
 ## `git checkout`
 
-lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch.
-It is similar but different from `git clone` as clone works to fetch code from a remote repository, alternatively checkout works to switch between versions of code already on the local system.
+用来跳转分支。checkout一个分支会更新工作目录下的文件以匹配分支中的文件，并告诉Git金路当前分支下所有新的commit。
+该操作类似于 `git clone` 但也有区别。clone会从远端提取文件到本地，而checkout用于在本地跳转不同的版本。
 
 [Git checkout [Atlassian]](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
 
