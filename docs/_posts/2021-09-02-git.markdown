@@ -58,6 +58,12 @@ It is similar but different from `git clone` as clone works to fetch code from a
 
 将本地库的文件上传到远程库，即将本地的commits传输到远程库。对应的相反的命令是 `git fetch`。
 
+## `git commit`
+
+提交commit。不同的选项可查看文档。
+
+[Git-commit Documentation [Git Book]](https://git-scm.com/docs/git-commit)
+
 # 相关知识
 
 ## Git数据转换
@@ -78,7 +84,8 @@ HEAD是指向当前commit的分支的指针，working tree是当前工作空间�
 
 1. `git checkout -b {branch name}` 创建一个分支并跳转到该分支。
 2. `git add .` 把所有改变转移到暂存区。
-3. `git commit -m {description}`
+3. `git commit -m {description}` 提交commit并包含一个对该commit的描述。
+4. `git push {remote name} {branch name}` 把commit传输到远程对应的分支，remote name通常为origin。
 
 
 
