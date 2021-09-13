@@ -1,3 +1,10 @@
+---
+layout: single
+title:  "Scope Functions"
+date:   2021-09-03 18:26:00 +0800
+categories: Java Kotlin
+---
+
 虽然Java也有作用域函数（Scope functions），但是在使用Java的过程中我很少用到，所以对它的了解很少。正好现在学Kotlin就学习一下。
 
 官方文档对作用域函数的解释如下：
