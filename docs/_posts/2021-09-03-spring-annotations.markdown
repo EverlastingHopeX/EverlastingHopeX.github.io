@@ -1,3 +1,10 @@
+---
+layout: single
+title:  "Spring Annotations"
+date:   2021-09-03 18:26:00 +0800
+categories: Spring
+---
+
 暂存一些新遇到的注解，之后再总结。
 
 # `@Scheduled`
