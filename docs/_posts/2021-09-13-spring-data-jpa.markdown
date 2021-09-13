@@ -1,3 +1,10 @@
+---
+layout: single
+title:  "Spring Data JPA"
+date:   2021-09-13 15:26:00 +0800
+categories: Spring
+---
+
 # JPA
 
 JPA是Java Persistence API，是Java EE的标准的一部分，它定义了对象关系映射和管理可持续对象（persistent object）的API。JPA自身并没有提供任何实现，
