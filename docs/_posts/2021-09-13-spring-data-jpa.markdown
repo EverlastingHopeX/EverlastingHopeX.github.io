@@ -26,7 +26,21 @@ CRUD方法，Spring JPA也提供了一些定义我们自己的访问方法的途
 fun findByName(String name)
 ```
 
- 会自动生成依据 `name` 查询数据库的代码。返回值为一个列表，元素为在扩展 `JpaRepository` 时指定的实体。
+ 会自动生成依据 `name` 查询数据库的代码。返回值为一个列表，元素为在扩展 `JpaRepository` 时指定的实体。需要注意命名转换的规则。
+ 
+### 命名转换（Naming Convention）
+ 
+#### 默认命名转换
+
+Spring默认使用命名规则的是小写蛇形（lower snake case），即仅使用小写字母和下划线。需注意的是，在命名属性时需要使用驼峰式命名，才能正确地转换为对应的小写蛇形命名。
+
+例如：firstName 会被转换为 first_name
+
+#### 自定义命名转换
+
+如果想要使用自定义的命名转换规则，则需要实现 `PhysicalNamingStrategy` 接口，然后在配置文件中设定命名转换规则为使用我们实现的命名转换规则
+
+[Custom Naming Convention with Spring Data JPA [Baeldung]](https://www.baeldung.com/spring-data-jpa-custom-naming)
 
 ## 手动创建自定义查询
 
