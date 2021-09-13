@@ -1,5 +1,7 @@
 ---
 layout: single
+toc: true
+toc_label: "Table of contents"
 title:  "Scope Functions"
 date:   2021-09-03 18:26:00 +0800
 categories: Java Kotlin
