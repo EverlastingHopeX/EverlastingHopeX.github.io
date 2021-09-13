@@ -1,5 +1,7 @@
 ---
 layout: single
+toc: true
+toc_label: "Table of contents"
 title:  "Spring Data JPA"
 date:   2021-09-13 15:26:00 +0800
 categories: Spring
