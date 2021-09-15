@@ -69,17 +69,33 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 
 在使用 `@Autowire` 时，有时因为有多个同类型的bean存在，Spring无法判断应该注入哪个bean，这时候就可以使用 `@Qualifier` 来指定使用哪一个bean。
 
-# `@Entity`
+# Entity
 
-# `@EntityListeners`
+## `@Entity`
+
+## `@EntityListeners`
 
 指定对实体的回调监听器（callback listener），常用 `AuditingEntityListener`。设定好监听器后可以在该类中声明监听的属性（如修改日期，修改者），并标明对应的注解，
 
 （参考：[JPA Entity Lifecycle Events [Baeldung](https://www.baeldung.com/jpa-entity-lifecycle-events)，[Auditing [Spring docs]](https://docs.spring.io/spring-data/jpa/docs/1.7.0.DATAJPA-580-SNAPSHOT/reference/html/auditing.html)，[Auditing with JPA, Hibernate, and Spring Data JPA [Baeldung](https://www.baeldung.com/database-auditing-jpa)）
 
-# `@Id`
+## `@Id`
 
 把数据模型类中的一个属性标记为主键。
+
+# Controller
+
+## `@Controller`
+
+## '@RestController`
+
+RestController的出现是为了简化RESTFul web服务的创建。它相当于组合了 `@Controller` 和 `@ResponseBody`，从而省略了给Controller的每个处理请求的方法单独标注 `@ResponseBody` 的麻烦。
+
+# Request Handling
+
+## `@RequestHeader`
+
+获取HTTP请求的头部，可以指定某个特定的属性，如使用 `@RequestHeader("acccept-language")`，也可以不标注特定属性，用一个Map或者HttpHeaders对象来获取全部信息
 
 # 参考资料
 
@@ -88,3 +104,7 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 [Lock @Scheduled Tasks With ShedLock And Spring Boot](https://rieckpil.de/lock-scheduled-tasks-with-shedlock-and-spring-boot/)
 
 [The Spring @Qualifier Annotation [Baeldung]](https://www.baeldung.com/spring-qualifier-annotation)
+
+[The Spring @Controller and @RestController Annotations [Baeldung]](https://www.baeldung.com/spring-controller-vs-restcontroller)
+
+[How to Read HTTP Headers in Spring REST Controllers [Baeldung]](https://www.baeldung.com/spring-rest-http-headers)
