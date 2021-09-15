@@ -138,6 +138,8 @@ Mockito对应答的定义为
 应答及其功能可见：
 [应答（Answers）[MockK docs]](https://mockk.io/#answers)
 
+如果想在应答中访问方法的参数，可以使用 `firstArg()`，`secondArg()`等，更多可见 [Answers [MockK Guidebook]](https://notwoods.github.io/mockk-guidebook/docs/mocking/answers/)
+
 ## 集合
 
 在做测试的过程中，有的类的属性包括了集合的实例。在这种情况下，似乎应该Mock一个集合，事实上这不是什么好主意，因为集合的方法很多，而且互相依赖，很难保证对每个方法都Mock了相应的
