@@ -9,7 +9,9 @@ categories: Spring
 
 暂存一些新遇到的注解，之后再总结。
 
-# `@Scheduled`
+# Schedule
+
+## `@Scheduled`
 
 用于配制和安排任务。用来注解的方法应该是无返回值（如果有则被忽略）且无参数。
 可以实现的配置包括: 1. 在一定延迟后执行，用于强制任务在上个执行完成后才能再次执行的情况，2. 以一定的频率执行，需注意任务不会并发执行，只有在上次任务完成后
@@ -27,7 +29,7 @@ categories: Spring
 @Scheduled(cron = "* * * * * *")
 ```
 
-## 测试方法
+### 测试方法
 
 ·@Scheduled` 的测试方法包括：
 1. 集成测试.
@@ -36,14 +38,14 @@ categories: Spring
 首先需要新建 SchduledConfig 类并添加 `@EnableSchduling` 注解。然后就可以采用集成测试的方法或者使用Awaitility的方法，两者区别仅在于注入方法采用 `@Autowire` 还是 `@SpyBean`，以及Awaitiliy提供的方法可读性更好。
 （参考 [How to Test the @Scheduled Annotation [Baeldung]](https://www.baeldung.com/spring-testing-scheduled-annotation)
 
-### Awaitility
+#### Awaitility
 
 >Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner.
 以上是 Awaitiliy 的官方解释。简而言之 Awaitility 提供了方便的测试异步系统的方法。
 
 （参考 [Awaitility.org](http://www.awaitility.org/)）
 
-# `@SchedulerLock`
+## `@SchedulerLock`
 
 为了避免使用 `@Scheduled` 的方法在并行环境下执行导致数据不一致，Spring提供了ShedLock来确保同一时间只执行一个任务。通过给任务加锁，其他实例在检测到任务已
 上锁便会跳过，在下一次task schduling时再尝试获取锁。
@@ -57,15 +59,17 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 @SchedulerLock(name = "lockName", lockAtMostFor = "50s", lockAtLeastFor = "30s")
 ```
 
-# `@ConfigurationProperties`
+# Configuration
+
+## `@ConfigurationProperties`
 
 用于使用配置文件配置Bean。
 
-# `@ConstructorBinding`
+## `@ConstructorBinding`
 
 绑定构造器和配置文件，使得修饰的类成为不可更改的（immutable）。
 
-# `@Qualifier`
+## `@Qualifier`
 
 在使用 `@Autowire` 时，有时因为有多个同类型的bean存在，Spring无法判断应该注入哪个bean，这时候就可以使用 `@Qualifier` 来指定使用哪一个bean。
 
@@ -97,6 +101,14 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 
 获取HTTP请求的头部，可以指定某个特定的属性，如使用 `@RequestHeader("acccept-language")`，也可以不标注特定属性，用一个Map或者HttpHeaders对象来获取全部信息
 
+# Events
+
+可以通过扩展 `ApplicationEvent` 接口来自定义Event，然后通过 `ApplicationEventPublisher` 的 `publish()` 方法来发布一个活动。活动的监听器可以是一个实现了 `ApplicationListener` 接口的bean，或者通过 `@EventListener` 注册到任意一个bean的公开方法上。
+
+## `@EventListener`
+
+方法签名声明了消费的活动类型，指定的监听器默认是同步的，但也可以通过添加 `@Async` 来设置为异步的。
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
@@ -108,3 +120,5 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 [The Spring @Controller and @RestController Annotations [Baeldung]](https://www.baeldung.com/spring-controller-vs-restcontroller)
 
 [How to Read HTTP Headers in Spring REST Controllers [Baeldung]](https://www.baeldung.com/spring-rest-http-headers)
+
+[Spring Events [Baeldung]](https://www.baeldung.com/spring-events)
