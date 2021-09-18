@@ -109,6 +109,17 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 
 方法签名声明了消费的活动类型，指定的监听器默认是同步的，但也可以通过添加 `@Async` 来设置为异步的。
 
+# Stream
+
+# '@EnableBinding`
+
+首先需要启用绑定才能使用如 `@Input` 之类的注解。
+
+# `@Input` and `@Output`
+
+`@Input` 标明一个MessageChannel为该模块的输入频道（input channel），而 `@Output` 标明输出频道。
+更多高级的输入输出设定可以参考 (Advanced binding properties)[https://docs.spring.io/spring-cloud-stream/docs/1.0.0.M3/reference/html/spring-cloud-stream-overview.html#_advanced_binding_properties]
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
@@ -122,3 +133,5 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 [How to Read HTTP Headers in Spring REST Controllers [Baeldung]](https://www.baeldung.com/spring-rest-http-headers)
 
 [Spring Events [Baeldung]](https://www.baeldung.com/spring-events)
+
+[Spring Cloud Stream Overview [Spring docs]](https://docs.spring.io/spring-cloud-stream/docs/1.0.0.M3/reference/html/spring-cloud-stream-overview.html)
