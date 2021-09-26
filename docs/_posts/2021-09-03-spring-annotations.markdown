@@ -61,6 +61,10 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 
 # Configuration
 
+## `@Configuration`
+
+指明该类包含用 `@Bean` 标注的方法，这些方法会被Spring容器用于构建bean定义和服务请求。
+
 ## `@ConfigurationProperties`
 
 用于使用配置文件配置Bean。
