@@ -32,6 +32,10 @@ categories: JUnit5 Kotlin MockK
 
 修饰方法，指明该方法是一个测试方法。
 
+5. `@TestInstance`
+
+用于指定测试用例的生命周期。默认为每次测试都创建新的当前类的测试实例。
+
 
 ## 元注解与组合注解（Meta Annotations and Composed Annotations）
 
@@ -160,3 +164,5 @@ Mockito对应答的定义为
 
 [MockK Guidebook [Tiger Oakes]](https://notwoods.github.io/mockk-guidebook/)
 >
+
+[@TestInstance Annotation in JUnit 5 [Baeldung]](https://www.baeldung.com/junit-testinstance-annotation)
