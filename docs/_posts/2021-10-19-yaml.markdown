@@ -1,3 +1,9 @@
 YAML files are used to hold properties. Here is the syntax documentation for YAML.
 
+Empty list: \[\]
+
+Empty string: \"\"
+
+Empty mapping: \{\}
+
 [YAML Syntax - Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
