@@ -67,7 +67,14 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 
 ## `@ConfigurationProperties`
 
-用于使用配置文件配置Bean。
+用于使用配置文件配置Bean。文档推荐将不同配置文件分开到独自的POJO类。在这些POJO类中，类的属性对应配置文件中的属性，Spring的自动绑定机制会依照`@ConfigurationProperties(prefix="")`中指定的prefix来找到配置文件对应位置的属性。名字不需要完全相同，可以改变大小写或添加 `-` 或 `_`。
+
+Spring boot 2.2后Spring会通过classpath扫描找到并注册配置文件类（使用了 `@ConfigurationProperties`），所以不需要对配置文件对应的类添加额外的 `@Component`或其他注解（`@Configuration`，`EnableConfigurationProperties`）。扫描由 `@SpringBootApplication` 启用。我们还可以使用`@ConfigurationPropertiesScan` 指明需要扫描配置的位置。
+
+我们还可以将此注解加在使用了 `@Bean` 的方法上，此用法适用于将属性绑定在我们无法控制的第三方组件上。
+
+参考：[Guide to @ConfigurationProperties in Spring Boot](https://www.baeldung.com/configuration-properties-in-spring-boot)
+
 
 ## `@ConstructorBinding`
 
@@ -139,3 +146,5 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 [Spring Events [Baeldung]](https://www.baeldung.com/spring-events)
 
 [Spring Cloud Stream Overview [Spring docs]](https://docs.spring.io/spring-cloud-stream/docs/1.0.0.M3/reference/html/spring-cloud-stream-overview.html)
+
+[Guide to @ConfigurationProperties in Spring Boot](https://www.baeldung.com/configuration-properties-in-spring-boot)
