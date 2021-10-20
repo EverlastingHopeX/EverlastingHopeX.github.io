@@ -67,7 +67,7 @@ ShedLock有四种属性：`name`，`lock_until`，`locked_at`，和`locked_by`�
 
 ## `@ConfigurationProperties`
 
-用于使用配置文件配置Bean。文档推荐将不同配置文件分开到独自的POJO类。在这些POJO类中，类的属性对应配置文件中的属性，Spring的自动绑定机制会依照`@ConfigurationProperties(prefix="")`中指定的prefix来找到配置文件对应位置的属性。名字不需要完全相同，可以改变大小写或添加 `-` 或 `_`。
+用于使用配置文件配置Bean。文档推荐将不同配置文件分开到独自的POJO类。在这些POJO类中，类的属性对应配置文件中的属性，Spring的自动绑定机制会依照`@ConfigurationProperties(prefix="")`中指定的prefix来找到配置文件对应位置的属性。名字不需要完全相同，可以改变大小写或添加 `-` 或 `_`。需注意成员需要是 `var` 而不能是 `val`，因为Bean需要有getter和setter（参考：[Kotlin & Spring Boot @ConfigurationProperties [StackOverflow]](https://stackoverflow.com/questions/45953118/kotlin-spring-boot-configurationproperties)。
 
 Spring boot 2.2后Spring会通过classpath扫描找到并注册配置文件类（使用了 `@ConfigurationProperties`），所以不需要对配置文件对应的类添加额外的 `@Component`或其他注解（`@Configuration`，`EnableConfigurationProperties`）。扫描由 `@SpringBootApplication` 启用。我们还可以使用`@ConfigurationPropertiesScan` 指明需要扫描配置的位置。
 
