@@ -131,6 +131,12 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 `@Input` 标明一个MessageChannel为该模块的输入频道（input channel），而 `@Output` 标明输出频道。
 更多高级的输入输出设定可以参考 (Advanced binding properties)[https://docs.spring.io/spring-cloud-stream/docs/1.0.0.M3/reference/html/spring-cloud-stream-overview.html#_advanced_binding_properties]
 
+# `@ServiceActivator`
+
+用于指明某个方法可用于处理一个消息（Message）或者消息负载（Message payload）。它的参数 `inputChannel`用于指明为此服务激活器提供需要消费的消息的频道。
+
+[ServiceActivator [Spring docs]](https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html)
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
