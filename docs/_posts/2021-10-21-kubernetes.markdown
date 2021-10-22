@@ -36,8 +36,8 @@ In that case, communication with pods need to be reconfigured every time one pod
 
 ## Service
 
-Different from pod, service's IP address is permanent. Each service will be attached to each pod, but life cycle of service is not connected 
-to pod.
+Different from pod, service's IP address is permanent. Each service will be attached to a set of pods, but life cycle of service is not connected 
+to the pods.
 
 There are two types of services: external services and internal services. External services open the communication from external sources, 
 while internal services cannot be accessed by external sources.
@@ -50,16 +50,20 @@ name-based virtual hosting.
 
 参考：[Ingress [Kubernetes docs]](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-# ConfigMap
+## ConfigMap
 
 It would be tedious to restart app every time just to change a simple property, such as the DB url. K8s provides ConfigMap as external configuration 
 of application.
 
 However, it is not recommended to put credential information such as username and password in ConfigMap since it would be insecure.
 
-# Secret
+## Secret
 
 For crendential information, k8s also provide another component called Secret. Data in Secret will be encoded in base64 format.
+
+## Volumes
+
+Attach physical storage to pod. The storage can be either local or remote. One thing to notice is that k8s does not manage data persistency.
 
 # Access pod
 
