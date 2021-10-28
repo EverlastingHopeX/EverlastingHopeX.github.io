@@ -65,6 +65,16 @@ For crendential information, k8s also provide another component called Secret. D
 
 Attach physical storage to pod. The storage can be either local or remote. One thing to notice is that k8s does not manage data persistency.
 
+## Deployment
+
+Deployment is the blueprint of pod, it is another layer of abstraction over pods. We only need to create deployment to manipulate pods.
+
+## StatefulSet
+
+Deployment should not be used to replicate DB pods, as replicated DB pods will access the same DB and it could introduce inconsistency problems. 
+Another component, StatefulSet, is used to deploy stateful apps like DBs, and it ensures that no inconsistency problem can occur. However, StatefulSet 
+is not easy to use, so users of k8s usually prefer to only deploy stateless apps in k8s.
+
 # Access pod
 
 `kubectl exec --stdin --tty <pod> -- /bin/bash`
