@@ -75,6 +75,22 @@ Deployment should not be used to replicate DB pods, as replicated DB pods will a
 Another component, StatefulSet, is used to deploy stateful apps like DBs, and it ensures that no inconsistency problem can occur. However, StatefulSet 
 is not easy to use, so users of k8s usually prefer to only deploy stateless apps in k8s.
 
+# Processes
+
+Three processes have to be installed on each node for K8s.
+
+## Container runtime
+
+Container such as docker
+
+## Kublet
+
+Kublet interacts with container and node.
+
+## Kube proxy
+
+Kube proxy forward the requests. It is used to implement the idea of Service.
+
 # Access pod
 
 `kubectl exec --stdin --tty <pod> -- /bin/bash`
@@ -86,3 +102,5 @@ is not easy to use, so users of k8s usually prefer to only deploy stateless apps
 [Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours] [YouTube]](https://www.youtube.com/watch?v=X48VuDVv0do)
   
 [Ingress [Kubernetes docs]](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+
+[Deployment [Kubernetes docs]](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
