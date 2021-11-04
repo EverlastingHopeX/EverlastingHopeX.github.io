@@ -95,15 +95,15 @@ Kube proxy forward the requests. It is used to implement the idea of Service.
 
 There are 4 master prcoesses running on master node: Api server, Scheduler, Controller manager, and etcd.
 
-Api server works as cluster gateway and gatekeeper for authentication. The requests coming from client will be validated by Api server and then 
+**Api server** works as cluster gateway and gatekeeper for authentication. The requests coming from client will be validated by Api server and then 
 forwarded to other processes.
 
-Scheduler handles the requests forwarded by Api server, and starts the pod on one of the worker node. Scheduler decides which worker node to place the new 
+**Scheduler** handles the requests forwarded by Api server, and starts the pod on one of the worker node. Scheduler decides which worker node to place the new 
 pod.
 
-Controller manager detects cluster state changes, and it will send request to scheduler to reschedule pods if a cluster dies.
+**Controller manager** detects cluster state changes, and it will send request to scheduler to reschedule pods if a cluster dies.
 
-Etcd is a key value store used for persistency. It saves all the changes such as a pod died or a pod is rescheduled.
+**Etcd** is a key value store used for persistency. It saves all the changes such as a pod died or a pod is rescheduled.
 
 # Access pod
 
