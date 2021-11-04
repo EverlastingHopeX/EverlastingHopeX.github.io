@@ -105,6 +105,18 @@ pod.
 
 **Etcd** is a key value store used for persistency. It saves all the changes such as a pod died or a pod is rescheduled.
 
+Multiple master nodes should be used. The requests to Api servers on these master nodes will be load balanced, and the etcds are distributed storage across 
+all master nodes.
+
+# Minikube
+
+Minikube is a node which runs both master processes and worker processes. It will create virtual box on the machine and run the node inside the virtual 
+box. Minikube is used to set up a cluster in one machine for testing purposes.
+
+# Kubectl
+
+Kubectl is a command line tool for k8s cluster. We can use kubectl to send request to Api server on a node to interact with pods.
+
 # Access pod
 
 `kubectl exec --stdin --tty <pod> -- /bin/bash`
