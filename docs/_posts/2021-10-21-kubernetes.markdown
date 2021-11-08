@@ -1,4 +1,4 @@
-# 定义
+# Definition
 
 Open source container orchestration tool
 
@@ -117,16 +117,34 @@ box. Minikube is used to set up a cluster in one machine for testing purposes.
 
 Kubectl is a command line tool for k8s cluster. We can use kubectl to send request to Api server on a node to interact with pods.
 
+[Kubectl reference docs [Kubernetes docs]](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+> Documentation for all kubectl commands provided by Kubernetes.
+
+## Main kubectl commands
+
+`kubectl get`
+> Display one or many resources. Frequently used to display active pods with `pods` suffix.
+
+`kubectl logs`
+> Print the logs from the specfied pod and container.
+
+`kubectl exec`
+> Execute a command in a container. It can be used to get an interactive shell on a pod. 
+> (`kubectl exec --stdin --tty shell-demo -- /bin/bash`)
+
+
 # Access pod
 
 `kubectl exec --stdin --tty <pod> -- /bin/bash`
 
-参考：[Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)  
+Reference：[Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)  
 
-# 参考资源
+# Reference
 
 [Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours] [YouTube]](https://www.youtube.com/watch?v=X48VuDVv0do)
   
 [Ingress [Kubernetes docs]](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 [Deployment [Kubernetes docs]](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+[Kubectl reference docs [Kubernetes docs]](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
