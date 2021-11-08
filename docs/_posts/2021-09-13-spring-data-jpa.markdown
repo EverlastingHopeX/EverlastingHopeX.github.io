@@ -55,6 +55,8 @@ Spring默认使用命名规则的是小写蛇形（lower snake case），即仅�
 
 手动创建需要使用 `@Query` 。
 
+参考：[Spring Data JPA @Query [Baeldung]](https://www.baeldung.com/spring-data-jpa-query)
+
 # 参考资料
 
 [What’s the difference between JPA, Hibernate and EclipseLink [Thorben Janssen]](https://thorben-janssen.com/difference-jpa-hibernate-eclipselink/#Java_Persistence_API_JPA)
