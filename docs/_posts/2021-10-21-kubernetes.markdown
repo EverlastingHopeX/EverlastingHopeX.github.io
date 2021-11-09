@@ -34,6 +34,10 @@ running inside one pod.
 Each pod has one unique IP address. When a pod dies, a new pod will be created to replace it, and this new pod will obtain a new IP address. 
 In that case, communication with pods need to be reconfigured every time one pod dies, which calls the need for service.
 
+## ReplicaSet
+
+A ReplicaSet manages the replicas of a pods.
+
 ## Service
 
 Different from pod, service's IP address is permanent. Each service will be attached to a set of pods, but life cycle of service is not connected 
@@ -67,7 +71,8 @@ Attach physical storage to pod. The storage can be either local or remote. One t
 
 ## Deployment
 
-Deployment is the blueprint of pod, it is another layer of abstraction over pods. We only need to create deployment to manipulate pods.
+Deployment is the blueprint of pod, it is another layer of abstraction over pods (actually it's over ReplicaSet). We only need to create deployment 
+to manipulate pods.
 
 ## StatefulSet
 
@@ -132,12 +137,11 @@ Kubectl is a command line tool for k8s cluster. We can use kubectl to send reque
 > Execute a command in a container. It can be used to get an interactive shell on a pod. 
 > (`kubectl exec --stdin --tty shell-demo -- /bin/bash`)
 
-
-# Access pod
-
-`kubectl exec --stdin --tty <pod> -- /bin/bash`
-
 Reference：[Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)  
+
+`kubectl edit`
+> Edit a resource from the default editor.
+
 
 # Reference
 
