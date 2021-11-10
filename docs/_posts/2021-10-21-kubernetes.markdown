@@ -142,6 +142,11 @@ Reference：[Get a Shell to a Running Container](https://kubernetes.io/docs/task
 `kubectl edit`
 > Edit a resource from the default editor.
 
+`kubectl describe`
+> Show details of a specific resource or group of resources.
+
+`kubectl apply`
+> Apply a configuration to a resource by file name or stdin.
 
 # Reference
 
