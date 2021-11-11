@@ -74,6 +74,12 @@ Attach physical storage to pod. The storage can be either local or remote. One t
 Deployment is the blueprint of pod, it is another layer of abstraction over pods (actually it's over ReplicaSet). We only need to create deployment 
 to manipulate pods.
 
+```mermaid
+graph TD
+Deployment --> ReplicaSet;
+ReplicaSet --> Pod;
+Pod --> Container;
+```
 ## StatefulSet
 
 Deployment should not be used to replicate DB pods, as replicated DB pods will access the same DB and it could introduce inconsistency problems. 
