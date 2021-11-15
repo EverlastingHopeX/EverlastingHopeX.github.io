@@ -123,7 +123,8 @@ Mock对象的任何方法是否被调用，使用 `verifySequence()`和`verifyOr
 
 匹配器相当于通配符或者正则表达式，用来匹配特定的值，用于打桩（stubs）或者验证。
 
-`any()` 的使用非常方便，当遇到overload时，可以使用 `any<T>()` 来指定特定的类。 
+`any()` 的使用非常方便，当遇到overload时，可以使用 `any<T>()` 来指定特定的类。（虽然我认为提供一个诸如 `anyList()` 的匹配器对集合类型进行匹配会直观的多，但是目前Mockk只采用 
+`any<List<T>>()` 来匹配列表类型）
 
 匹配器及其功能可见：
 [匹配器（Matchers）[MockK docs]](https://mockk.io/#matchers)
