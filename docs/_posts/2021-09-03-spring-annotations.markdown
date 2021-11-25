@@ -137,6 +137,12 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 
 [ServiceActivator [Spring docs]](https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html)
 
+# `@Transactional`
+
+用于声明某个方法作为一个事务处理（类比数据库事务的概念）。
+
+[Transaction Propagation and Isolation in Spring @Transactional](https://www.baeldung.com/spring-transactional-propagation-isolation)
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
