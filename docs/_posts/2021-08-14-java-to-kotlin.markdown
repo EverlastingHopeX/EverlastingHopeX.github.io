@@ -48,6 +48,7 @@ Kotlin相对Java除了语法的细微改变，有值得注意的几点。
 21. `*`。星号在Kotlin中为展开操作符（Spread operator），例如会把一个Int类型的列表转化为一组Int类型的对象作为参数。另一个与 `*` 的概念是可变数量参数 `vararg` （参考：[Varargs and Spread Operator in Kotlin[Baeeldung]](https://www.baeldung.com/kotlin/varargs-spread-operator)
 22. `Unit`。对应Java中的 `void`。
 23. `@Deprecated`。（参考：[@Deprecated in Kotlin](https://dzone.com/articles/deprecated-annotation-in-kotlin)）
+24. `reified`。（参考：[How does the reified keyword in Kotlin work?](https://stackoverflow.com/questions/45949584/how-does-the-reified-keyword-in-kotlin-work)）
 # 参考资源
 
 [Kotlin Documentation](https://kotlinlang.org/docs/home.html)
