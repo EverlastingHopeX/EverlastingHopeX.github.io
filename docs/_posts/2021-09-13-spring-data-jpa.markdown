@@ -62,6 +62,12 @@ Spring默认使用命名规则的是小写蛇形（lower snake case），即仅�
 当查询的结果所需空间太大时，可以指定返回类型为Page。Page不是实际的资源，而是资源的一个展示的一部分（类比数据库的视图）。当我们想要访问资源的不同部分时，可以调用
 Page的方法，Spring Data JPA会自动生成对应的query（修改页面的位置）并获取数据。
 
+## Specifications
+
+使用Specification，我们可以简单地通过自定义Specification实现基于条件的查询。
+
+[REST Query Language with Spring Data JPA Specifications](https://www.baeldung.com/rest-api-search-language-spring-data-specifications)
+
 参考： 
 [Pagination in Spring Boot Applications [DZone]](https://dzone.com/articles/pagination-in-springboot-applications)
 [REST Pagination in Spring [Baeldung]](https://www.baeldung.com/rest-api-pagination-in-spring)
