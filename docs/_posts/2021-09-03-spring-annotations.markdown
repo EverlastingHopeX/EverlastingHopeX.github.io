@@ -143,6 +143,13 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 
 [Transaction Propagation and Isolation in Spring @Transactional](https://www.baeldung.com/spring-transactional-propagation-isolation)
 
+# `@ComponentScan`
+
+配置应用需要扫描的组件，可以通过`excludeFilters`参数来设置其中不需要扫描的部分。
+
+[Spring Component Scanning [Baeldung]](https://www.baeldung.com/spring-component-scanning)
+[Spring @ComponentScan – Filter Types [Baeldung]](https://www.baeldung.com/spring-componentscan-filter-type)
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
