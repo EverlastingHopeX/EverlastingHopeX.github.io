@@ -141,7 +141,7 @@ Kubectl is a command line tool for k8s cluster. We can use kubectl to send reque
 
 `kubectl exec`
 > Execute a command in a container. It can be used to get an interactive shell on a pod. 
-> (`kubectl exec --stdin --tty shell-demo -- /bin/bash`)
+> (`kubectl exec --stdin --tty <pod> -- /bin/bash`)
 
 Reference：[Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)  
 
