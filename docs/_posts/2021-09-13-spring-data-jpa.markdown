@@ -65,6 +65,7 @@ Page的方法，Spring Data JPA会自动生成对应的query（修改页面的�
 ## Specifications
 
 使用Specification，我们可以简单地通过自定义Specification实现基于条件的查询。
+初始化Specification的时候需要注意使用的数据格式和对应数据库需要的数据格式，有时Spring不能做到对应的转化（如把LocalDateTime转化为timestamp）。
 
 [REST Query Language with Spring Data JPA Specifications](https://www.baeldung.com/rest-api-search-language-spring-data-specifications)
 
