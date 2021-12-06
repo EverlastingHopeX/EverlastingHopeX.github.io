@@ -72,8 +72,11 @@ Page的方法，Spring Data JPA会自动生成对应的query（修改页面的�
 [REST Query Language with Spring Data JPA Specifications [Baeldung]](https://www.baeldung.com/rest-api-search-language-spring-data-specifications)
 
 参考： 
+
 [Pagination in Spring Boot Applications [DZone]](https://dzone.com/articles/pagination-in-springboot-applications)
+
 [REST Pagination in Spring [Baeldung]](https://www.baeldung.com/rest-api-pagination-in-spring)
+
 [Pagination and Sorting using Spring Data JPA [Baeldung]](https://www.baeldung.com/spring-data-jpa-pagination-sorting)
 
 # 参考资料
