@@ -122,7 +122,7 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 
 # Stream
 
-# '@EnableBinding`
+# `@EnableBinding`
 
 首先需要启用绑定才能使用如 `@Input` 之类的注解。
 
