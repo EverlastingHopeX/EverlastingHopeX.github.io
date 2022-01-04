@@ -7,3 +7,7 @@ Empty string: \"\"
 Empty mapping: \{\}
 
 [YAML Syntax - Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+
+## Automatic conversion
+
+Spring provides automatic conversion from string read from configurations to a specific type. For example, from string like "1s" to Duration.
