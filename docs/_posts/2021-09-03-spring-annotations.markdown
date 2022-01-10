@@ -140,6 +140,7 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 # `@Transactional`
 
 用于声明某个方法作为一个事务处理（类比数据库事务的概念）。
+该注解用于service层，而非repository。参考[Where does the @Transactional annotation belong?](https://stackoverflow.com/questions/1079114/where-does-the-transactional-annotation-belong)
 
 [Transaction Propagation and Isolation in Spring @Transactional](https://www.baeldung.com/spring-transactional-propagation-isolation)
 
