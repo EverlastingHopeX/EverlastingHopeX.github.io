@@ -55,6 +55,8 @@ Spring默认使用命名规则的是小写蛇形（lower snake case），即仅�
 
 手动创建需要使用 `@Query` 。
 
+需要注意的是，如果自定义了需要修改数据库的查询，需要添加`@Modifying`，并在对应service层加`@Transactional`。
+
 参考：[Spring Data JPA @Query [Baeldung]](https://www.baeldung.com/spring-data-jpa-query)
 
 ## Pagination
