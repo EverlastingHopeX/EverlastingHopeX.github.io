@@ -97,6 +97,11 @@ MockK是面向Kotlin的模拟库（Mocking library。
 4. `answers()`
 
 
+5. `wasNot`
+
+`wasNot` is used for verify if the whole mock is called, should not be used to verify a single method.
+
+
 
 其他函数及其功能可见：
 [常用函数表（Top level functions）[MockK docs]](https://mockk.io/#top-level-functions)
