@@ -1,0 +1,10 @@
+Actually should have written a note about this a long time ago. Anyway, it's better now than never.
+
+#Jackson
+
+[Jackson docs](https://github.com/FasterXML/jackson-docs)
+
+Jackson is the json parsing lib I'm using at work, mainly used for converting json stored in DB and DTO used in code back and forth. 
+They also listed some helpful tutorial in the doc website. So far I'm just learning bit by bit whenever I encounter some issues, I'll learn
+this systematically with the tutorial and continueously update this note.
+
