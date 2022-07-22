@@ -151,6 +151,10 @@ RestController的出现是为了简化RESTFul web服务的创建。它相当于�
 [Spring Component Scanning [Baeldung]](https://www.baeldung.com/spring-component-scanning)
 [Spring @ComponentScan – Filter Types [Baeldung]](https://www.baeldung.com/spring-componentscan-filter-type)
 
+# `@ContextConfiguration(initializers = [ConfigDataApplicationContextInitializer::class])`
+
+用于测试使用了`@ConfigurationProperties`的配置类。
+
 # 参考资料
 
 [The @Scheduled Annotation in Spring [Baeldung]](https://www.baeldung.com/spring-scheduled-tasks)
