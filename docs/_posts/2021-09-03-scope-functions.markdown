@@ -18,6 +18,15 @@ categories: Java Kotlin
 它们的区别可参考下表：
 [函数选择 [Kotlin docs]](https://www.kotlincn.net/docs/reference/scope-functions.html#%E5%87%BD%E6%95%B0%E9%80%89%E6%8B%A9)
 
+| 函数    | 对象引用 | 返回值            | 是否是扩展函数             |
+| ------- | -------- | ----------------- | -------------------------- |
+| `let`   | `it`     | Lambda 表达式结果 | 是                         |
+| `run`   | `this`   | Lambda 表达式结果 | 是                         |
+| `run`   | -        | Lambda 表达式结果 | 不是：调用无需上下文对象   |
+| `with`  | `this`   | Lambda 表达式结果 | 不是：把上下文对象当做参数 |
+| `apply` | `this`   | 上下文对象        | 是                         |
+|         `also`|`it`|上下文对象|是|
+
 遇到过一次小坑，使用MockK的 `every{}` 时，在其内部也有 `this`。如果在外部使用 `apply{}` 就会导致`this` 被覆盖。
 
 # 参考资源
