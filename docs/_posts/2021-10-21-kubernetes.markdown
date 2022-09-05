@@ -145,6 +145,9 @@ Kubectl is a command line tool for k8s cluster. We can use kubectl to send reque
 `kubectl get`
 > Display one or many resources. Frequently used to display active pods with `pods` suffix.
 
+`kubectl get pods -L <label> |grep <name>`
+> Display info (including a label column) for pods with name like <name>.
+
 `kubectl logs`
 > Print the logs from the specfied pod and container.
 
