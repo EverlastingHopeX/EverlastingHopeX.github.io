@@ -14,3 +14,11 @@ a relatively long period of time)
 
 We can be confident that new data will contain new field, but we may still need to handle old data which may only have the old field. To 
 support handling this case, make sure your logic will take the old field as input when the new field is missing.
+
+
+# Three phases: expand, migration, contract
+
+After going through the below practices. I found a helpful article about migration. It summarize how to perform migration in 3 stages, 
+wish I had seen this earlier.
+
+[ParallelChange](https://martinfowler.com/bliki/ParallelChange.html)
