@@ -1,0 +1,59 @@
+---
+layout: single
+toc: true
+toc_label: "Table of contents"
+title:  "Spring AoP"
+date:   2022-12-30 11:42:00 +0800
+categories: Kafka
+---
+
+# What is Kafka
+
+Kafka is an event streaming platform used to collect, process, and store streaming event data or data that has no discrete beginning or end. 
+
+## Features
+
+1. Fast: no perceptible lag, however, the procesoor itself may still block the pipe.
+2. High accuracy: 
+3. It maintains the order (with proper configuration)
+4. Resilient: replicated
+
+However, setting up kafka cluster is not simple. Some vendors can help manage kafka, like Google Cloud Platform or Aliyun.
+
+# Use cases
+
+## Decouple system dependencies
+
+Events are asynchronously handled, the producer does not need to care about the handling or outcome. The real time system or when
+the producer need to know the outcome, we should consider the trade-offs.
+
+## Messaging
+
+## Location tracking
+
+## Data gathering
+
+Kafka is good at processing large volumne of data and can be easily scaled.
+
+# APIs
+
+## Producer API
+
+Create records (kafka messages) and push them to topics (bus). The topics can hold the data for a period of time, which can be even in terms of days.
+
+## Consumer API
+
+Subscribe topics. 
+
+## Streams API
+
+Combine both producer API and consumer API. It can consume data, then aggregate, anaylze and transform data, and push result to old or another topic.
+
+## Connector API
+
+Configure data source.
+
+# Reference
+[What is Kafka (YouTube)](https://www.youtube.com/watch?v=aj9CDZm0Glc)
+
+[What is Kafka (Google Cloud)](https://cloud.google.com/learn/what-is-apache-kafka)
